@@ -1,16 +1,11 @@
 ﻿using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace WPFDesktopGUI.Core
 {
     public class App : MvxApplication
     {
-
         /// <summary>
         /// Runs in background on application startup
         /// </summary>
@@ -21,7 +16,7 @@ namespace WPFDesktopGUI.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<HomeViewModel>();
+            RegisterAppStart<ViewModels.HomeViewModel>();
         }
     }
 }
